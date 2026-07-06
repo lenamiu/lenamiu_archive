@@ -1,42 +1,47 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #0f0f14;
-  color: white;
-  margin: 0;
-  padding: 20px;
-  text-align: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f0f14;
+    color: white;
 }
-
-/* LINKS */
-a {
-  color: #7ab7ff;
-  text-decoration: none;
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #6a0dad, #c06cff);
 }
-
-a:hover {
-  text-decoration: underline;
+header h1 {
+    margin: 0;
+    font-size: 42px;
 }
-
-/* HOMEPAGE MAP */
-.map {
-  position: relative;
-  height: 500px;
-  margin-top: 40px;
-  border: 2px solid #333;
-  border-radius: 12px;
+header p {
+    font-size: 18px;
 }
-
-/* CLICKABLE AREAS */
-.spot {
-  position: absolute;
-  padding: 14px;
-  background: #222;
-  border-radius: 12px;
-  color: white;
-  transition: 0.2s;
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: #181820;
 }
-
-.spot:hover {
-  background: #444;
-  transform: scale(1.05);
+nav a {
+    color: white;
+    text-decoration: none;
+    background: #6a0dad;
+    padding: 12px 18px;
+    border-radius: 20px;
+}
+nav a:hover {
+    background: #c06cff;
+}
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #181820;
+    border-radius: 20px;
+    text-align: center;
+}
+h2 {
+    color: #c06cff;
 }
