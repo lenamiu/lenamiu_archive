@@ -62,3 +62,23 @@ h2 {
     color: #dddddd;
     line-height: 1.6;
 }
+
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #6a0dad;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.button:hover {
+    background: #c06cff;
+}
+
+.card-container {
+    display: grid;
+    gap: 20px;
+    padding: 10px;
+}
