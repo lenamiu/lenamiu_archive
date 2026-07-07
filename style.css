@@ -1,13 +1,16 @@
-/* =================================
+/* =====================================
    LENAMIU ARCHIVE
-   Modern Peach Mobile App Theme
-================================= */
+   Dark Luxury Mobile Theme
+===================================== */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 
 * {
-    box-sizing: border-box;
+
+    box-sizing:border-box;
+
 }
 
 
@@ -15,85 +18,48 @@ body {
 
     margin:0;
 
-    font-family:"Inter", Arial, sans-serif;
+    font-family:"Inter", "Segoe UI", Arial, sans-serif;
 
     background:
+
     linear-gradient(
         160deg,
-        #fffaf7 0%,
-        #ffe9dc 45%,
-        #ffd3c0 100%
+        #140b08,
+        #2b1711,
+        #4a281d
     );
 
-    color:#352823;
+    color:#fff5ef;
 
     min-height:100vh;
 
 }
 
 
-/* ================================
-   FEATURE BANNER
-================================ */
+
+/* =====================================
+   HEADERS
+===================================== */
 
 
-.hero {
+header,
+.page-header {
 
-    position:relative;
+    text-align:center;
 
-    height:430px;
-
-    display:flex;
-
-    align-items:flex-end;
-
-    padding:30px 22px;
-
-    overflow:hidden;
-
-    border-radius:
-    0 0 35px 35px;
-
-
-    background:
-
-    linear-gradient(
-        180deg,
-        rgba(0,0,0,0.05),
-        rgba(0,0,0,0.65)
-    ),
-    url("images/upcoming-series.jpg");
-
-
-    background-size:cover;
-
-    background-position:center;
+    padding:45px 20px 30px;
 
 }
 
 
-
-.hero-content {
-
-    position:relative;
-
-    z-index:2;
-
-    color:white;
-
-    max-width:600px;
-
-}
-
-
-
-.hero h1 {
+header h1,
+.page-header h1 {
 
     margin:0 0 12px;
 
     font-size:42px;
 
-    font-weight:700;
+    color:#ffc0a3;
 
     letter-spacing:-1px;
 
@@ -101,26 +67,117 @@ body {
 
 
 
-.hero p {
+header p,
+.page-header p {
 
-    margin:0;
+    color:#d9b5a5;
 
     font-size:16px;
-
-    line-height:1.6;
-
-    opacity:.95;
 
 }
 
 
 
-/* ================================
-   SEARCH
-================================ */
+/* =====================================
+   NAVIGATION
+===================================== */
+
+
+nav {
+
+    display:flex;
+
+    gap:10px;
+
+    overflow-x:auto;
+
+    width:92%;
+
+    margin:-15px auto 35px;
+
+    padding:12px;
+
+
+    background:
+
+    rgba(255,255,255,.08);
+
+
+    backdrop-filter:blur(20px);
+
+
+    border-radius:30px;
+
+
+    border:
+
+    1px solid rgba(255,192,163,.18);
+
+}
+
+
+
+nav a {
+
+    flex-shrink:0;
+
+    text-decoration:none;
+
+    color:#ffd8c8;
+
+    background:
+
+    rgba(255,176,138,.12);
+
+    padding:12px 18px;
+
+    border-radius:25px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+
+nav a:hover {
+
+    background:#ffb08a;
+
+    color:#2b1711;
+
+}
+
+
+
+/* =====================================
+   MAIN
+===================================== */
+
+
+main {
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:20px;
+
+}
+
+
+
+/* =====================================
+   SEARCH BAR
+===================================== */
 
 
 .search-box {
+
+    display:flex;
 
     width:90%;
 
@@ -128,21 +185,15 @@ body {
 
     margin:25px auto;
 
-    display:flex;
-
-    padding:7px;
+    padding:8px;
 
     background:
 
-    rgba(255,255,255,.85);
-
-    backdrop-filter:blur(15px);
+    rgba(255,255,255,.1);
 
     border-radius:50px;
 
-    box-shadow:
-
-    0 10px 30px rgba(0,0,0,.08);
+    backdrop-filter:blur(15px);
 
 }
 
@@ -158,9 +209,19 @@ body {
 
     background:transparent;
 
+    color:white;
+
     padding:14px 18px;
 
     font-size:15px;
+
+}
+
+
+
+.search-box input::placeholder {
+
+    color:#d9b5a5;
 
 }
 
@@ -172,127 +233,21 @@ body {
 
     border-radius:50px;
 
-    padding:12px 20px;
+    padding:12px 22px;
 
-    background:#ff9b7a;
+    background:#ff9f7a;
 
-    color:white;
+    color:#2b1711;
 
-    font-weight:600;
-
-}
-
-
-
-/* ================================
-   NAVIGATION
-================================ */
-
-
-nav {
-
-    position:sticky;
-
-    top:12px;
-
-    z-index:20;
-
-    display:flex;
-
-    gap:8px;
-
-    overflow-x:auto;
-
-    width:92%;
-
-    margin:-25px auto 30px;
-
-    padding:10px;
-
-
-    background:
-
-    rgba(255,255,255,.75);
-
-
-    backdrop-filter:blur(20px);
-
-
-    border-radius:30px;
-
-
-    box-shadow:
-
-    0 10px 30px rgba(0,0,0,.08);
+    font-weight:700;
 
 }
 
 
 
-nav a {
-
-    flex-shrink:0;
-
-    text-decoration:none;
-
-    color:#604840;
-
-    padding:11px 17px;
-
-    border-radius:25px;
-
-    font-size:14px;
-
-    font-weight:600;
-
-}
-
-
-
-nav a:hover {
-
-    background:#ffb092;
-
-    color:white;
-
-}
-
-
-
-/* ================================
-   CONTENT
-================================ */
-
-
-main {
-
-    max-width:1100px;
-
-    margin:auto;
-
-    padding:20px;
-
-}
-
-
-
-h2 {
-
-    text-align:center;
-
-    color:#7b5144;
-
-    font-size:28px;
-
-    margin-bottom:25px;
-
-}
-
-
-
-/* ================================
-   ARCHIVE CARDS
-================================ */
+/* =====================================
+   CARDS
+===================================== */
 
 
 .cards,
@@ -307,7 +262,7 @@ h2 {
         minmax(250px,1fr)
     );
 
-    gap:18px;
+    gap:22px;
 
 }
 
@@ -315,62 +270,28 @@ h2 {
 
 .card {
 
-    position:relative;
-
-    text-decoration:none;
-
-    color:inherit;
-
-    padding:24px;
-
-
     background:
 
-    rgba(255,255,255,.8);
+    rgba(255,255,255,.07);
 
+    border-radius:24px;
 
-    backdrop-filter:blur(20px);
-
-
-    border-radius:26px;
-
+    padding:22px;
 
     border:
 
-    1px solid rgba(255,255,255,.9);
+    1px solid rgba(255,192,163,.18);
 
-
-    box-shadow:
-
-    0 12px 35px rgba(0,0,0,.07);
-
-
-    transition:.25s;
+    color:white;
 
 }
 
 
 
-.card:hover {
-
-    transform:translateY(-5px);
-
-
-    box-shadow:
-
-    0 20px 45px rgba(0,0,0,.12);
-
-}
-
-
-
+.card h2,
 .card h3 {
 
-    margin-top:0;
-
-    color:#e87961;
-
-    font-size:20px;
+    color:#ffc0a3;
 
 }
 
@@ -378,7 +299,7 @@ h2 {
 
 .card p {
 
-    color:#65534d;
+    color:#d9b5a5;
 
     line-height:1.6;
 
@@ -386,40 +307,9 @@ h2 {
 
 
 
-/* ================================
-   X / YOUTUBE LINKS
-================================ */
-
-
-.archive-link {
-
-    display:inline-block;
-
-    margin-top:15px;
-
-    color:#e87961;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    font-size:14px;
-
-}
-
-
-
-.archive-link:hover {
-
-    color:#b85d49;
-
-}
-
-
-
-/* ================================
-   VIDEO CARDS
-================================ */
+/* =====================================
+   YOUTUBE VIDEO ARCHIVE
+===================================== */
 
 
 .video-grid {
@@ -428,12 +318,9 @@ h2 {
 
     grid-template-columns:
 
-    repeat(
-        auto-fit,
-        minmax(280px,1fr)
-    );
+    repeat(4,1fr);
 
-    gap:20px;
+    gap:22px;
 
 }
 
@@ -441,15 +328,47 @@ h2 {
 
 .video-card {
 
+    display:block;
+
+    text-decoration:none;
+
+    color:white;
+
     overflow:hidden;
 
-    background:white;
 
-    border-radius:26px;
+    background:
+
+    rgba(255,255,255,.07);
+
+
+    border-radius:24px;
+
+
+    border:
+
+    1px solid rgba(255,192,163,.18);
+
+
+    transition:.3s;
+
+}
+
+
+
+.video-card:hover {
+
+    transform:
+
+    translateY(-8px);
+
+
+    border-color:#ffb08a;
+
 
     box-shadow:
 
-    0 12px 35px rgba(0,0,0,.08);
+    0 20px 45px rgba(255,160,120,.2);
 
 }
 
@@ -463,28 +382,78 @@ h2 {
 
     object-fit:cover;
 
-}
-
-
-
-.video-info {
-
-    padding:18px;
+    display:block;
 
 }
 
 
 
-/* ================================
+.video-title {
+
+    padding:16px;
+
+    color:#ffc0a3;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    line-height:1.4;
+
+}
+
+
+
+.video-card:hover .video-title {
+
+    color:#ffe4d8;
+
+}
+
+
+
+/* =====================================
+   REMOVE OLD BUTTONS
+===================================== */
+
+
+.button {
+
+    display:none !important;
+
+}
+
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+
+footer {
+
+    text-align:center;
+
+    padding:40px 20px;
+
+    color:#b99584;
+
+    font-size:14px;
+
+}
+
+
+
+/* =====================================
    ANIMATION
-================================ */
+===================================== */
 
 
 .card,
 .video-card,
 nav {
 
-    animation:fadeUp .45s ease;
+    animation:fadeUp .5s ease;
 
 }
 
@@ -496,7 +465,7 @@ from {
 
     opacity:0;
 
-    transform:translateY(15px);
+    transform:translateY(20px);
 
 }
 
@@ -513,26 +482,37 @@ to {
 
 
 
-/* ================================
-   MOBILE
-================================ */
+/* =====================================
+   RESPONSIVE
+===================================== */
 
 
-@media(max-width:700px){
+@media(max-width:1000px){
 
 
-.hero {
+.video-grid {
 
-    height:380px;
+    grid-template-columns:
+
+    repeat(2,1fr);
 
 }
 
 
-.hero h1 {
+}
+
+
+
+@media(max-width:600px){
+
+
+header h1,
+.page-header h1 {
 
     font-size:34px;
 
 }
+
 
 
 main {
@@ -542,18 +522,26 @@ main {
 }
 
 
+
+.video-grid {
+
+    grid-template-columns:
+
+    1fr;
+
+}
+
+
+
 .cards,
 .card-container {
 
-    grid-template-columns:1fr;
+    grid-template-columns:
+
+    1fr;
 
 }
 
 
-.search-box button {
-
-    padding:12px 16px;
-
-}
 
 }
