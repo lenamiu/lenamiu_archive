@@ -1,7 +1,13 @@
-/* Lenamiu Archive - Peach Glass App Theme */
+/* =================================
+   LENAMIU ARCHIVE
+   Modern Peach Mobile App Theme
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 
 * {
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 
@@ -9,79 +15,59 @@ body {
 
     margin:0;
 
-    font-family:
-    "Segoe UI",
-    Arial,
-    sans-serif;
+    font-family:"Inter", Arial, sans-serif;
 
     background:
     linear-gradient(
-        135deg,
-        #fff8f3,
-        #ffe3d2
+        160deg,
+        #fffaf7 0%,
+        #ffe9dc 45%,
+        #ffd3c0 100%
     );
 
-    color:#33231f;
+    color:#352823;
+
+    min-height:100vh;
 
 }
 
 
+/* ================================
+   FEATURE BANNER
+================================ */
 
-/* MODERN HERO */
 
 .hero {
 
-position:relative;
+    position:relative;
 
-overflow:hidden;
+    height:430px;
 
-min-height:650px;
+    display:flex;
 
-display:flex;
+    align-items:flex-end;
 
-align-items:center;
+    padding:30px 22px;
 
-justify-content:center;
+    overflow:hidden;
 
-padding:50px 20px;
-
-background:
-
-linear-gradient(
-135deg,
-#fff0e6,
-#ffd5c2,
-#ffad8a
-);
-
-border-radius:
-0 0 70px 70px;
-
-}
+    border-radius:
+    0 0 35px 35px;
 
 
-/* floating glow */
+    background:
 
-.hero::before {
+    linear-gradient(
+        180deg,
+        rgba(0,0,0,0.05),
+        rgba(0,0,0,0.65)
+    ),
+    url("images/upcoming-series.jpg");
 
-content:"";
 
-position:absolute;
+    background-size:cover;
 
-width:500px;
-
-height:500px;
-
-background:
-rgba(255,255,255,.4);
-
-border-radius:50%;
-
-filter:blur(80px);
-
-top:-200px;
-
-left:-100px;
+    background-position:center;
 
 }
 
@@ -89,13 +75,13 @@ left:-100px;
 
 .hero-content {
 
-position:relative;
+    position:relative;
 
-z-index:3;
+    z-index:2;
 
-max-width:600px;
+    color:white;
 
-text-align:center;
+    max-width:600px;
 
 }
 
@@ -103,11 +89,13 @@ text-align:center;
 
 .hero h1 {
 
-font-size:65px;
+    margin:0 0 12px;
 
-color:#563329;
+    font-size:42px;
 
-margin:0 0 20px;
+    font-weight:700;
+
+    letter-spacing:-1px;
 
 }
 
@@ -115,36 +103,46 @@ margin:0 0 20px;
 
 .hero p {
 
-font-size:20px;
+    margin:0;
 
-color:#704b3d;
+    font-size:16px;
 
-line-height:1.6;
+    line-height:1.6;
+
+    opacity:.95;
 
 }
 
 
 
-/* SEARCH */
+/* ================================
+   SEARCH
+================================ */
+
 
 .search-box {
 
-display:flex;
+    width:90%;
 
-margin-top:35px;
+    max-width:600px;
 
-padding:8px;
+    margin:25px auto;
 
-background:
-rgba(255,255,255,.75);
+    display:flex;
 
-backdrop-filter:
-blur(20px);
+    padding:7px;
 
-border-radius:50px;
+    background:
 
-box-shadow:
-0 15px 35px rgba(0,0,0,.12);
+    rgba(255,255,255,.85);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:50px;
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.08);
 
 }
 
@@ -152,17 +150,17 @@ box-shadow:
 
 .search-box input {
 
-flex:1;
+    flex:1;
 
-border:none;
+    border:none;
 
-outline:none;
+    outline:none;
 
-background:transparent;
+    background:transparent;
 
-padding:15px 20px;
+    padding:14px 18px;
 
-font-size:16px;
+    font-size:15px;
 
 }
 
@@ -170,196 +168,62 @@ font-size:16px;
 
 .search-box button {
 
-border:none;
+    border:none;
 
-padding:15px 25px;
+    border-radius:50px;
 
-border-radius:50px;
+    padding:12px 20px;
 
-background:
+    background:#ff9b7a;
 
-linear-gradient(
-135deg,
-#ff9f7a,
-#f58a7b
-);
+    color:white;
 
-color:white;
-
-font-weight:bold;
+    font-weight:600;
 
 }
 
 
 
-/* BUTTERFLIES */
-
-.butterfly {
-
-position:absolute;
-
-width:75px;
-
-opacity:.85;
-
-animation:
-float 5s infinite ease-in-out;
-
-}
-
-
-
-.butterfly-one {
-
-top:100px;
-
-left:8%;
-
-}
-
-
-
-.butterfly-two {
-
-top:220px;
-
-right:10%;
-
-animation-delay:2s;
-
-}
-
-
-
-/* TEDDY */
-
-.teddy {
-
-position:absolute;
-
-width:170px;
-
-right:25%;
-
-bottom:30px;
-
-animation:
-float 4s infinite ease-in-out;
-
-}
-
-
-
-/* FLOAT ANIMATION */
-
-@keyframes float {
-
-0%,100% {
-
-transform:translateY(0);
-
-}
-
-
-50% {
-
-transform:translateY(-20px);
-
-}
-
-}
-
-
-/* soft glow */
-
-header::before {
-
-    content:"";
-
-    position:absolute;
-
-    width:400px;
-
-    height:400px;
-
-    background:
-    rgba(255,255,255,.35);
-
-    border-radius:50%;
-
-    filter:blur(80px);
-
-    top:-150px;
-
-    left:-100px;
-
-}
-
-
-
-header h1 {
-
-    position:relative;
-
-    margin:0;
-
-    font-size:60px;
-
-    letter-spacing:2px;
-
-    color:#4a2c24;
-
-}
-
-
-
-header p {
-
-    position:relative;
-
-    max-width:600px;
-
-    margin:20px auto;
-
-    font-size:20px;
-
-    color:#68463b;
-
-}
-
-
-
-/* NAVIGATION */
+/* ================================
+   NAVIGATION
+================================ */
 
 
 nav {
 
+    position:sticky;
+
+    top:12px;
+
+    z-index:20;
+
     display:flex;
 
-    justify-content:center;
+    gap:8px;
 
-    flex-wrap:wrap;
+    overflow-x:auto;
 
-    gap:12px;
+    width:92%;
 
-    padding:18px;
+    margin:-25px auto 30px;
 
-    width:90%;
+    padding:10px;
 
-    margin:-35px auto 40px;
 
     background:
-    rgba(255,255,255,.65);
 
-    backdrop-filter:
-    blur(20px);
+    rgba(255,255,255,.75);
 
-    border-radius:50px;
+
+    backdrop-filter:blur(20px);
+
+
+    border-radius:30px;
+
 
     box-shadow:
-    0 15px 35px rgba(0,0,0,.12);
 
-    position:relative;
+    0 10px 30px rgba(0,0,0,.08);
 
 }
 
@@ -367,20 +231,19 @@ nav {
 
 nav a {
 
-    color:#5b3b32;
+    flex-shrink:0;
 
     text-decoration:none;
 
-    background:
-    rgba(255,179,138,.35);
+    color:#604840;
 
-    padding:12px 22px;
+    padding:11px 17px;
 
-    border-radius:30px;
+    border-radius:25px;
 
-    font-weight:bold;
+    font-size:14px;
 
-    transition:.3s;
+    font-weight:600;
 
 }
 
@@ -388,23 +251,17 @@ nav a {
 
 nav a:hover {
 
-    background:
-    linear-gradient(
-        135deg,
-        #ffb38a,
-        #f58a7b
-    );
+    background:#ffb092;
 
     color:white;
-
-    transform:
-    translateY(-4px);
 
 }
 
 
 
-/* MAIN */
+/* ================================
+   CONTENT
+================================ */
 
 
 main {
@@ -413,41 +270,44 @@ main {
 
     margin:auto;
 
-    padding:25px;
+    padding:20px;
 
 }
 
-
-
-/* HEADINGS */
 
 
 h2 {
 
     text-align:center;
 
-    color:#e87961;
+    color:#7b5144;
 
-    font-size:32px;
+    font-size:28px;
+
+    margin-bottom:25px;
 
 }
 
 
 
-/* CARDS */
+/* ================================
+   ARCHIVE CARDS
+================================ */
 
 
+.cards,
 .card-container {
 
     display:grid;
 
     grid-template-columns:
+
     repeat(
-    auto-fit,
-    minmax(260px,1fr)
+        auto-fit,
+        minmax(250px,1fr)
     );
 
-    gap:25px;
+    gap:18px;
 
 }
 
@@ -455,27 +315,37 @@ h2 {
 
 .card {
 
-    display:block;
+    position:relative;
 
     text-decoration:none;
 
     color:inherit;
 
+    padding:24px;
+
+
     background:
-    rgba(255,255,255,.7);
 
-    backdrop-filter:
-    blur(20px);
+    rgba(255,255,255,.8);
 
-    padding:25px;
 
-    border-radius:30px;
+    backdrop-filter:blur(20px);
+
+
+    border-radius:26px;
+
+
+    border:
+
+    1px solid rgba(255,255,255,.9);
+
 
     box-shadow:
 
-    0 15px 35px rgba(0,0,0,.08);
+    0 12px 35px rgba(0,0,0,.07);
 
-    transition:.35s;
+
+    transition:.25s;
 
 }
 
@@ -483,35 +353,24 @@ h2 {
 
 .card:hover {
 
-    transform:
-    translateY(-10px);
+    transform:translateY(-5px);
+
 
     box-shadow:
 
-    0 25px 50px rgba(245,138,123,.25);
+    0 20px 45px rgba(0,0,0,.12);
 
 }
 
 
 
-.card img {
-
-    width:100%;
-
-    aspect-ratio:16/9;
-
-    object-fit:cover;
-
-    border-radius:22px;
-
-}
-
-
-
-.card h2,
 .card h3 {
 
+    margin-top:0;
+
     color:#e87961;
+
+    font-size:20px;
 
 }
 
@@ -519,57 +378,48 @@ h2 {
 
 .card p {
 
-    color:#5d4a43;
+    color:#65534d;
 
-    line-height:1.7;
+    line-height:1.6;
 
 }
 
 
 
-/* BUTTONS */
+/* ================================
+   X / YOUTUBE LINKS
+================================ */
 
 
-.button {
+.archive-link {
 
     display:inline-block;
 
     margin-top:15px;
 
-    padding:12px 25px;
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #ffb38a,
-        #f58a7b
-    );
-
-    color:white;
+    color:#e87961;
 
     text-decoration:none;
 
-    border-radius:50px;
+    font-weight:600;
 
-    font-weight:bold;
-
-    transition:.3s;
+    font-size:14px;
 
 }
 
 
 
-.button:hover {
+.archive-link:hover {
 
-    transform:
-    scale(1.05);
+    color:#b85d49;
 
 }
 
 
 
-/* VIDEO SECTION */
+/* ================================
+   VIDEO CARDS
+================================ */
 
 
 .video-grid {
@@ -577,12 +427,13 @@ h2 {
     display:grid;
 
     grid-template-columns:
+
     repeat(
-    auto-fit,
-    minmax(280px,1fr)
+        auto-fit,
+        minmax(280px,1fr)
     );
 
-    gap:30px;
+    gap:20px;
 
 }
 
@@ -590,30 +441,15 @@ h2 {
 
 .video-card {
 
-    background:
-    rgba(255,255,255,.7);
-
-    backdrop-filter:
-    blur(20px);
-
-    border-radius:30px;
-
     overflow:hidden;
+
+    background:white;
+
+    border-radius:26px;
 
     box-shadow:
 
-    0 15px 35px rgba(0,0,0,.08);
-
-    transition:.3s;
-
-}
-
-
-
-.video-card:hover {
-
-    transform:
-    translateY(-8px);
+    0 12px 35px rgba(0,0,0,.08);
 
 }
 
@@ -633,21 +469,22 @@ h2 {
 
 .video-info {
 
-    padding:20px;
+    padding:18px;
 
 }
 
 
 
-/* PAGE LOAD ANIMATION */
+/* ================================
+   ANIMATION
+================================ */
 
 
 .card,
 .video-card,
 nav {
 
-    animation:
-    fadeUp .6s ease;
+    animation:fadeUp .45s ease;
 
 }
 
@@ -657,80 +494,65 @@ nav {
 
 from {
 
-opacity:0;
+    opacity:0;
 
-transform:
-translateY(20px);
+    transform:translateY(15px);
 
 }
 
 
 to {
 
-opacity:1;
+    opacity:1;
 
-transform:
-translateY(0);
-
-}
+    transform:translateY(0);
 
 }
 
+}
 
 
-/* MOBILE */
 
-@media(max-width:800px){
+/* ================================
+   MOBILE
+================================ */
+
+
+@media(max-width:700px){
+
 
 .hero {
 
-min-height:720px;
+    height:380px;
 
 }
 
 
 .hero h1 {
 
-font-size:40px;
+    font-size:34px;
 
 }
 
 
-.hero-image {
+main {
 
-opacity:.2;
-
-}
-
-
-.teddy {
-
-width:110px;
-
-right:10%;
-
-bottom:50px;
+    padding:15px;
 
 }
 
 
-.butterfly {
+.cards,
+.card-container {
 
-width:45px;
-
-}
-
-
-.search-box {
-
-flex-direction:column;
+    grid-template-columns:1fr;
 
 }
 
 
 .search-box button {
 
-width:100%;
+    padding:12px 16px;
 
 }
 
